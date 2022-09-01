@@ -31,7 +31,7 @@ pipeline {
 
       stage('Deploy to Cluster') {
           steps {
-            bat 'envsubst < C:/MZO/minikube/fleetman-webapp-1/deploy.yaml | kubectl apply -f -'
+            bat 'kubectl apply -f deploy.yaml'
           }
       }
    }
